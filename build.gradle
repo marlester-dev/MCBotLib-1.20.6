@@ -1,0 +1,45 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'me.marlester'
+version = '0.2.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.opencollab.dev/maven-releases/'
+    }
+    maven {
+        url 'https://repo.opencollab.dev/maven-snapshots/'
+    }
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = group
+            artifactId = project.name
+            version = version
+
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    compileOnly 'org.jetbrains:annotations:24.1.0'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    api 'com.github.AlexProgrammerDE:MCProtocolLib:39deae8'
+}
