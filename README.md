@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.marlester-dev:MCBotLib:version_here'
+    implementation 'com.github.marlester-dev:MCBotLib-1.20.6:version_here'
 }
 ```
 **Kotlin DSL:**
@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.marlester-dev:MCBotLib:version_here")
+    implementation("com.github.marlester-dev:MCBotLib-1.20.6:version_here")
 }
 ```
 Please see the latest version number on the [releases page](https://github.com/marlester-dev/MCBotLib/releases/latest).
